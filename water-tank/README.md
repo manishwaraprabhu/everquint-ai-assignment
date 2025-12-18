@@ -1,12 +1,14 @@
-# 💧 Water Tank Problem – Rainwater Trapping Visualization
+# Water Tank Problem – Rainwater Trapping Visualization
 
-## Live Demo
+## Live Demo (Local)
 
-🔗 **[Click here to try the Water Tank Problem](http://127.0.0.1:5500/water-tank/index.html)**
+🔗 **[Click here to run the Water Tank Problem](http://127.0.0.1:5500/water-tank/index.html)**
+
+> ⚠️ **Note:** This link works only when the project is run locally using VS Code Live Server.
 
 ---
 
-## 📌 Project Overview
+## Project Overview
 
 This project is a **frontend web application** that solves and visualizes the classic **Rainwater Trapping (Water Tank) Problem**. Given an array of block heights, the application computes how many units of water are trapped between the blocks after rainfall and displays the result using an **interactive SVG-based visualization**.
 
@@ -14,7 +16,7 @@ The goal is not just to compute the answer, but to **clearly demonstrate how and
 
 ---
 
-## 🧠 Problem Statement
+## Problem Statement
 
 Given an array of non-negative integers representing block heights, compute the **total units of water trapped between the blocks**.
 
@@ -34,7 +36,7 @@ Given an array of non-negative integers representing block heights, compute the 
 
 ---
 
-## 🖼️ Sample Input & Visualization
+## Sample Input & Visualization
 
 ![Water Tank Visualization](assets/demo.png)
 
@@ -47,7 +49,7 @@ This visual shows:
 
 ---
 
-## ⚙️ Solution Approach
+## Solution Approach
 
 ### Algorithm Used: Two-Pointer Technique
 
@@ -72,7 +74,7 @@ water = min(leftMax, rightMax) - height[i]
 
 ---
 
-## 🎨 Visualization Technique
+## Visualization Technique
 
 * Built using **SVG (Scalable Vector Graphics)**
 * Each block is rendered as a rectangle
@@ -87,7 +89,7 @@ water = min(leftMax, rightMax) - height[i]
 
 ---
 
-## 🛠️ Technology Stack
+## Technology Stack
 
 * **HTML5** – Structure
 * **CSS3** – Styling and layout
@@ -98,7 +100,7 @@ water = min(leftMax, rightMax) - height[i]
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 water-tank/
@@ -111,7 +113,7 @@ water-tank/
 
 ---
 
-## ▶️ How to Run the Application
+## How to Run the Application
 
 ### Option 1: Live Server (Recommended)
 
@@ -128,7 +130,7 @@ water-tank/
 
 ---
 
-## 🧪 Input Validation
+## Input Validation
 
 The application includes basic input validation:
 
@@ -140,7 +142,7 @@ This ensures robustness and prevents incorrect calculations.
 
 ---
 
-## ✨ Key Features
+## Key Features
 
 * ✅ Interactive input handling
 * ✅ Real-time trapped water calculation
@@ -151,7 +153,7 @@ This ensures robustness and prevents incorrect calculations.
 
 ---
 
-## 📚 Learning Outcomes
+## Learning Outcomes
 
 * Strong understanding of the **Rainwater Trapping algorithm**
 * Experience in **algorithm visualization**
@@ -161,7 +163,7 @@ This ensures robustness and prevents incorrect calculations.
 
 ---
 
-## 🚀 Future Enhancements (Optional)
+## Future Enhancements (Optional)
 
 * Animated water-filling effect
 * Mobile responsiveness
@@ -170,6 +172,6 @@ This ensures robustness and prevents incorrect calculations.
 
 ---
 
-## 🏁 Conclusion
+## Conclusion
 
 This project successfully transforms an algorithmic problem into a **clear, interactive, and visually intuitive web application**. It demonstrates both **problem-solving skills** and **frontend engineering proficiency**, making it well-suited for technical evaluations and portfolio showcasing.
