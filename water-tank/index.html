@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Water Tank Problem</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>Water Tank Problem</h1>
+    <p class="subtitle">Visual representation of water stored between blocks</p>
+
+    <!-- INPUT -->
+    <div class="input-section">
+        <input
+            type="text"
+            id="inputHeights"
+            placeholder="Enter heights (e.g. 0,4,0,0,0,6,0,6,4,0)"
+        />
+        <button onclick="computeWater()">Compute</button>
+    </div>
+
+    <!-- HOW IT WORKS -->
+    <div id="infoBox" class="info-box">
+        <h3>How it works</h3>
+        <p>
+            The Water Tank problem calculates how much rainwater can be trapped
+            between blocks of varying heights using a two-pointer approach. Using an 0(n) two-pointer algorithm, we track the maximum height
+            from the left and right sides. The water level at each position is
+            determined by the minimum of these two values minus the block height.
+        </p>
+    </div>
+
+    <!-- RESULT ABOVE VISUALIZATION -->
+    <h2 id="result" class="result-text"></h2>
+
+    <!-- SVG -->
+    <svg id="tankCanvas" width="850" height="350"></svg>
+
+    <!-- LEGEND -->
+    <div class="legend">
+        <span class="legend-item">
+            <span class="box block-box"></span> Blocks
+        </span>
+        <span class="legend-item">
+            <span class="box water-box"></span> Trapped Water
+        </span>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

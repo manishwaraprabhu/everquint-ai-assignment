@@ -1,0 +1,106 @@
+* {
+    box-sizing: border-box;
+    font-family: "Segoe UI", sans-serif;
+}
+
+body {
+    background-color: #f4f6f8;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 900px;
+    margin: 40px auto;
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.subtitle {
+    text-align: center;
+    color: #666;
+    margin-bottom: 25px;
+}
+
+.input-section {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+input {
+    width: 60%;
+    padding: 10px;
+    font-size: 16px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #1e40af;
+}
+
+.info-box {
+    background: #eef2ff;
+    padding: 15px;
+    border-left: 5px solid #2563eb;
+    border-radius: 5px;
+}
+
+.result-text {
+    text-align: center;
+    margin-top: 20px;
+    color: #0f172a;
+}
+
+#tankCanvas {
+    display: none;
+    margin: 20px auto;
+    background: #f8fafc;
+    border: 1px solid #ddd;
+}
+
+/* Legend */
+.legend {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 10px;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+}
+
+.box {
+    width: 18px;
+    height: 18px;
+    display: inline-block;
+}
+
+.block-box {
+    background: #6b7280;
+}
+
+.water-box {
+    background: #38bdf8;
+}
