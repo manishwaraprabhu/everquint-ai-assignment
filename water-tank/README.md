@@ -1,121 +1,121 @@
-# Water Tank Problem – Rainwater Trapping Visualization
+# 💧 Water Tank Problem – Rainwater Trapping Visualization
 
-## Problem Statement
+## Live Demo
 
-Given an array of non-negative integers representing the height of blocks, compute the **total units of water trapped between the blocks** after rainfall.
+🔗 **[Click here to try the Water Tank Problem](http://127.0.0.1:5500/water-tank/index.html)**
 
-You are required to build a **frontend web application** using **HTML, CSS, and Vanilla JavaScript** that:
-- Computes the total trapped water
-- Visually represents blocks and trapped water
-- Demonstrates the working of the rainwater trapping algorithm
+---
+
+## 📌 Project Overview
+
+This project is a **frontend web application** that solves and visualizes the classic **Rainwater Trapping (Water Tank) Problem**. Given an array of block heights, the application computes how many units of water are trapped between the blocks after rainfall and displays the result using an **interactive SVG-based visualization**.
+
+The goal is not just to compute the answer, but to **clearly demonstrate how and where water is accumulated** between blocks in a clean, production-ready UI.
+
+---
+
+## 🧠 Problem Statement
+
+Given an array of non-negative integers representing block heights, compute the **total units of water trapped between the blocks**.
 
 ### Example
 
 **Input**
-```text
+
+```
 [0, 4, 0, 0, 0, 6, 0, 6, 4, 0]
-````
+```
 
 **Output**
 
-```text
+```
 18 Units
 ```
 
 ---
 
-## Objective
+## 🖼️ Sample Input & Visualization
 
-The goal of this task is to:
+![Water Tank Visualization](assets/demo.png)
 
-* Solve the classic **Trapping Rain Water** algorithmic problem
-* Create a **visual, production-level frontend solution**
-* Clearly demonstrate **how water is accumulated between blocks**
-* Use **SVG-based visualization** for clarity and scalability
+This visual shows:
 
----
-
-## Solution Overview
-
-The application accepts a comma-separated list of block heights and performs the following:
-
-1. **Validates input**
-2. **Computes trapped water** using an efficient algorithm
-3. **Renders a visual diagram** showing:
-
-   * Block heights
-   * Trapped water between blocks
-4. Displays the **total units of water stored**
+* Gray blocks representing heights
+* Blue blocks representing trapped water
+* X-axis → block index
+* Y-axis → block height
 
 ---
 
-## Algorithm Used
+## ⚙️ Solution Approach
 
-### Two-Pointer Approach (O(n) Time Complexity)
+### Algorithm Used: Two-Pointer Technique
 
-* Initialize two pointers: `left` and `right`
-* Track:
+The application uses an **O(n) time complexity** two-pointer approach:
 
-  * `leftMax` → maximum height seen from the left
-  * `rightMax` → maximum height seen from the right
-* At each step:
+* Two pointers (`left`, `right`) traverse the array
+* Track maximum heights from both ends:
 
-  * Water trapped at a position =
-    `min(leftMax, rightMax) - currentHeight`
-* Accumulate total water units
+  * `leftMax`
+  * `rightMax`
+* Water trapped at each position:
 
-This approach ensures:
+```
+water = min(leftMax, rightMax) - height[i]
+```
 
-* **Linear time complexity**
-* **Constant space usage**
-* Optimal performance for large inputs
+### Why this approach?
+
+* ✅ Linear time complexity
+* ✅ Constant extra space
+* ✅ Optimal for large inputs
 
 ---
 
-## Visualization Technique
+## 🎨 Visualization Technique
 
-* **SVG (Scalable Vector Graphics)** is used for rendering
-* Each block is drawn as a rectangle
-* Trapped water is drawn on top of blocks using a different color
-* X and Y axes are dynamically generated
-* Visualization scales automatically based on maximum height
+* Built using **SVG (Scalable Vector Graphics)**
+* Each block is rendered as a rectangle
+* Trapped water is rendered above blocks in a different color
+* Axes are dynamically generated
+* Visualization auto-scales based on maximum height
 
 ### Legend
 
-* **Gray blocks** → Building blocks
-* **Blue blocks** → Trapped water
+* 🟦 **Blue** → Trapped Water
+* ⬜ **Gray** → Blocks
 
 ---
 
-## Technology Stack
+## 🛠️ Technology Stack
 
 * **HTML5** – Structure
 * **CSS3** – Styling and layout
 * **Vanilla JavaScript** – Logic and DOM manipulation
-* **SVG** – Scalable visualization
+* **SVG** – Visualization
 
-No external libraries or frameworks were used.
+> ❌ No frameworks or external libraries used
 
 ---
 
-## Project Structure
+## 📁 Project Structure
 
-```text
+```
 water-tank/
 │
 ├── index.html     # UI structure
 ├── style.css      # Styling and layout
-├── script.js      # Logic, algorithm & SVG rendering
-└── README.md      # Documentation
+├── script.js      # Algorithm logic & SVG rendering
+└── README.md      # Project documentation
 ```
 
 ---
 
-## How to Run the Application
+## ▶️ How to Run the Application
 
 ### Option 1: Live Server (Recommended)
 
-1. Open the project folder in **VS Code**
+1. Open the `water-tank` folder in **VS Code**
 2. Right-click on `index.html`
 3. Select **Open with Live Server**
 4. Enter input values and click **Compute**
@@ -128,50 +128,48 @@ water-tank/
 
 ---
 
-## Sample Input & Output
+## 🧪 Input Validation
 
-### Input
+The application includes basic input validation:
 
-```text
-0,4,0,0,0,0,6,0,6,4,0
-```
+* ❗ Empty input → prompts user to enter values
+* ❗ Non-numeric values → shows an error alert
+* ✔ Accepts only comma-separated numbers
 
-### Output
-
-```text
-Total Water Stored: 18 Units
-```
-
-### Visualization
-
-* Blocks rendered based on heights
-* Water displayed between blocks
-* Axes show index and height reference
+This ensures robustness and prevents incorrect calculations.
 
 ---
 
-## Key Features
+## ✨ Key Features
 
 * ✅ Interactive input handling
-* ✅ Real-time water calculation
+* ✅ Real-time trapped water calculation
 * ✅ SVG-based scalable visualization
-* ✅ Clean UI with legends and explanations
+* ✅ Axes, legend, and labels for clarity
 * ✅ Efficient O(n) algorithm
-* ✅ Production-ready frontend structure
+* ✅ Clean and maintainable frontend code
 
 ---
 
-## Learning Outcomes
+## 📚 Learning Outcomes
 
-* Deep understanding of the **Rainwater Trapping problem**
-* Hands-on experience with **algorithm visualization**
-* Improved frontend skills using **pure JavaScript**
-* SVG rendering and coordinate mapping
-* Writing clean, maintainable UI logic
+* Strong understanding of the **Rainwater Trapping algorithm**
+* Experience in **algorithm visualization**
+* Hands-on SVG rendering using JavaScript
+* Frontend engineering without frameworks
+* Writing production-quality UI logic
 
 ---
 
-## Conclusion
+## 🚀 Future Enhancements (Optional)
 
-This project successfully demonstrates how an algorithmic problem can be transformed into a **clear, interactive, and visual web application**.
-The solution is efficient, scalable, and aligns with real-world frontend engineering practices.
+* Animated water-filling effect
+* Mobile responsiveness
+* Step-by-step algorithm animation
+* Support for random or generated inputs
+
+---
+
+## 🏁 Conclusion
+
+This project successfully transforms an algorithmic problem into a **clear, interactive, and visually intuitive web application**. It demonstrates both **problem-solving skills** and **frontend engineering proficiency**, making it well-suited for technical evaluations and portfolio showcasing.
