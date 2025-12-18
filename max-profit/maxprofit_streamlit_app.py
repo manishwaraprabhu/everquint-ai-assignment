@@ -1,13 +1,13 @@
 import streamlit as st
 from max_profit import find_max_profit
 
-# ---------------- PAGE CONFIG ----------------
+# PAGE CONFIG 
 st.set_page_config(
     page_title="Max Profit Problem",
     layout="wide"
 )
 
-# ---------------- CONSTANTS ----------------
+# CONSTANTS 
 THEATRE_TIME = 5
 PUB_TIME = 4
 PARK_TIME = 10
@@ -16,7 +16,7 @@ THEATRE_EARN = 1500
 PUB_EARN = 1000
 PARK_EARN = 2000
 
-# ---------------- TITLE ----------------
+# TITLE 
 st.title("🏗️ Max Profit Problem")
 st.markdown(
     "Find the optimal combination of properties to maximize earnings on Mr. X's infinite Martian land."
@@ -24,7 +24,7 @@ st.markdown(
 
 st.divider()
 
-# ---------------- AVAILABLE PROPERTIES ----------------
+# AVAILABLE PROPERTIES
 st.subheader("🏘️ Available Properties")
 
 col1, col2, col3 = st.columns(3)
@@ -52,7 +52,7 @@ with col3:
 
 st.divider()
 
-# ---------------- INPUT & OUTPUT SECTION ----------------
+# INPUT & OUTPUT SECTION
 left_col, right_col = st.columns([1, 1])
 
 with left_col:
@@ -82,7 +82,7 @@ with right_col:
             f"- Theatre: {sol['T']} | Pub: {sol['P']} | Commercial Park: {sol['C']}"
         )
 
-        # ---------------- Earnings Breakdown ----------------
+        # Earnings Breakdown
         st.markdown("### 💵 Earnings Breakdown")
 
         current_time = 0
@@ -117,7 +117,7 @@ with right_col:
 
         st.divider()
 
-        # ---------------- Formula Explanation ----------------
+        # Formula Explanation
         st.markdown("### 📐 Earnings Formula")
 
         st.markdown(
