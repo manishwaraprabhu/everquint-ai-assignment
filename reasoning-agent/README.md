@@ -1,4 +1,4 @@
-# 🧠 Multi-Step Reasoning Agent with Self-Checking
+# Multi-Step Reasoning Agent with Self-Checking
 
 ## Overview
 
